@@ -1,0 +1,52 @@
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+
+/* 1_1 */
+body>div{
+    background: red;
+    transition: width 3s;
+}
+
+body>div:hover{
+    width: 400px;
+}
+
+/* 1_2 */
+.box{
+    background: lightgray;
+    position: relative;
+    height: 230px;
+    width: 500px;
+}
+
+.box div:first-of-type{
+    background: salmon;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: left 3s;
+    transition-timing-function: ease-in-out;
+}
+
+.box div:last-of-type{
+    background: lightgreen;
+    position: absolute;
+    top: 120px;
+    left: 10px;
+    transition: left 2s;
+    transition-delay: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.box:hover>div:first-of-type{
+    left: 390px;
+}
+
+.box:hover>div:last-of-type{
+    left: 390px;    
+}
